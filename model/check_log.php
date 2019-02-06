@@ -14,6 +14,16 @@ class check_log
 
     public function __construct()
     {
+
+        $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
+
+        if ($this->db->connect_errno) {
+
+            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_errno . ")" . $this->db->connect_error;
+
+        }
+
+
         $this->password = sha1($_POST['password']);
         $this->username = $_POST['username'];
     }

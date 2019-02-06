@@ -18,7 +18,7 @@ class personnage
     public function __construct()
     {
 
-        $this->db = new mysqli("localhost","root","","mvc_1");
+        $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 
         if ($this->db->connect_errno) {
 
