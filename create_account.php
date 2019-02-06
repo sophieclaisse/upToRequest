@@ -21,7 +21,7 @@
 <body>
 <h1>Create account :</h1>
 
-<form method="post" action="">
+<form method="post" action="model/Create_user.php">
     <label for="username_sub">Nickname :</label>
     <input type="text" id="username_sub" name="username_sub"/>
 
