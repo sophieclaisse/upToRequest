@@ -20,11 +20,11 @@
         <form action="check_log.php" methode="post">
 
             <div class="label">
-            <label for=""> Pseudo : </label>
+            <label for="username"> Pseudo : </label>
             </div>
 
             <div class="input">
-            <input type="text" name="username">
+            <input type="text" name="username" id="username">
             </div>
 
             <div class="label">
@@ -41,7 +41,7 @@
             </div>
         </form>
 
-        <a href="Create_user.php"> créer un compte </a>
+        <a href="create_account.php"> créer un compte </a>
     </div>
 
 </body>

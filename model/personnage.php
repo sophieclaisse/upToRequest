@@ -32,7 +32,6 @@ class personnage
         $this->attack = 25;
         $this->defense = 10;
         $this->skin = $_GET['skin'];
-
         filter_var($this->skin, FILTER_SANITIZE_STRING);
         $this->experience = 0;
     }

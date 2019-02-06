@@ -32,13 +32,13 @@ class check_log
     {
         GLOBAL $conn;
 
-        $sql = "SELECT ``,`` from `` WHERE '$this->username' = `` AND '$this->password' = ``";
+        $sql = "SELECT `pseudo`,`password` from `personnage` WHERE '$this->username' = `pseudo` AND '$this->password' = `password`";
 
         $dub = $conn->query($sql);
 
         $row = $dub->fetch_assoc();
 
-        $username = $row['username'];
+        $username = $row['pseudo'];
         $password = $row['password'];
 
 
