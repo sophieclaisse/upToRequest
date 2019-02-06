@@ -1,0 +1,15 @@
+body{
+    background-image: url(fondChooseAvatar.jpg);
+    text-align: center;
+    font-family: 'MedievalSharp', cursive;
+}
+
+H1{
+    font-size: 7em;
+}
+
+#value0, #value1, #value2, #value3{
+    background-color: transparent;
+    border-color: transparent;
+    height: 300px;
+}
