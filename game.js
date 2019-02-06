@@ -1,15 +1,13 @@
 var x=0;
 var y=0;
 
-var avatar = ['chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
 
 
-         var char = document.createElement('img');
-         char.src= "img/"+avatar[3];
+var char = document.createElement('img');
+         char.src= "img/"+avatars[index];
          char.id = "char";
          document.getElementById('map').appendChild(char);
-
 
 
 
