@@ -15,20 +15,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <title>Create account</title>
 </head>
 <body>
 <h1>Create account :</h1>
 
 <form method="post" action="">
-    <label>
-        <span>Nickname :</span>
+    <label for="username_sub">Nickname :</label>
     <input type="text" id="username_sub" name="username_sub"/>
-    </label>
-    <label>
-        <span>Password</span>
+
+    <label for="password_sub">Password</label>
         <input type="password" id="password_sub" name="password_sub"/>
-    </label>
+
 
         <input type="submit" name="btn_CreateAccount" id="btn_CreateAccount"/>
 
