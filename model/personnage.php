@@ -6,6 +6,9 @@
  * Time: 14:19
  */
 
+session_start();
+
+
 class personnage
 {
     protected $name;
@@ -28,12 +31,12 @@ class personnage
 
         }
 
-        $this->name = $_GET['name'];
+        $this->name = $_SESSION['username'];
         filter_var($this->name, FILTER_SANITIZE_STRING);
         $this->life = 100;
         $this->attack = 25;
         $this->defense = 10;
-        $this->skin = $_GET['skin'];
+        $this->skin = $_SESSION['skin'];
         filter_var($this->skin, FILTER_SANITIZE_STRING);
         $this->experience = 0;
         $this->position_X = rand(0,1200);
