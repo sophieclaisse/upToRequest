@@ -12,7 +12,7 @@ class createAccount_controller
 
     public function __construct()
     {
-        $this->model = new Create_user();
+        $this->model = new createaccount();
     }
 
     public function create_account()
