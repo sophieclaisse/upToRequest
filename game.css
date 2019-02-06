@@ -1,0 +1,14 @@
+#map{
+
+    width: 1200px;
+    height: 600px;
+    border: black solid;
+}
+
+#char{
+    width: 60px;
+    height: 60px;
+
+    display: inline-block;
+    position: relative;
+}
