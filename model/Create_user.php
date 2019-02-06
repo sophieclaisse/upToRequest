@@ -9,26 +9,34 @@
 
 class Create_user
 {
-    private $login ;
-    private $passwordUser;
+    protected $login ;
+    protected $passwordUser;
     public $con;
     public $avatar;
+    protected $db ;
 
 
     public function __construct()
     {
+        $this->db;
         $this->login = $_POST['username_sub'];
+        filter_var($this->login, FILTER_SANITIZE_STRING);
         $this->passwordUser = $_POST['password_sub'];
+        filter_var($this->passwordUser, FILTER_SANITIZE_STRING);
         $this->avatar;
 
 
-       // $db = new check_con();
-       // $this->con = $db->check();
+        $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 
+        if ($this->db->connect_errno) {
+
+            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_errno . ")" . $this->db->connect_error;
+
+        }
 
     }
 
-    public function create_user()
+    public function create_account()
     {
         $R_sql = "INSERT INTO `personnnage` (`pseudo`,`password`,`avatar`) 
                 VALUES (?,?,?)";
@@ -37,7 +45,7 @@ class Create_user
         $P_sql= $this->con->prepare($R_sql);
 
 
-        $P_sql->bind_param('ssisss',$this->login,$this->passwordUser,$this->avatar);
+        $P_sql->bind_param('sss',$this->login,$this->passwordUser,$this->avatar);
 
 
         $P_sql->execute();
