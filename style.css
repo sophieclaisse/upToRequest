@@ -1,6 +1,7 @@
 
 body {
   background: blanchedalmond;
+    font-family: 'MedievalSharp', cursive;
 }
 
 #body {
@@ -16,6 +17,7 @@ body {
     font-weight: bold;
     background: #00796B;
     color: ghostwhite;
+
 }
 
 .input {
@@ -37,4 +39,20 @@ button {
 
 .label {
 padding-top: 2%;
+}
+
+#form_account{
+    display: table-caption;
+    margin-left: 44em;
+    text-align: center;
+}
+
+#title_createAccount{
+text-align: center;
+
+}
+
+#btn_CreateAccount {
+    margin-top: 3em;
+    margin-left: 4em;
 }

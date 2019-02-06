@@ -28,9 +28,9 @@ class Create_user
 
         $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 
-        if ($this->db->connect_errno) {
+        if ($this->db->connect_error) {
 
-            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_errno . ")" . $this->db->connect_error;
+            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_error . ")" . $this->db->connect_error;
 
         }
 
