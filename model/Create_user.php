@@ -13,12 +13,12 @@ class Create_user
     protected $passwordUser;
     public $con;
     public $avatar;
-    protected $db ;
+
 
 
     public function __construct()
     {
-        $this->db;
+
         $this->login = $_POST['username_sub'];
         filter_var($this->login, FILTER_SANITIZE_STRING);
         $this->passwordUser = $_POST['password_sub'];
@@ -42,7 +42,7 @@ class Create_user
                 VALUES (?,?,?)";
 
 
-        $P_sql= $this->con->prepare($R_sql);
+        $P_sql= $this->db->prepare($R_sql);
 
 
         $P_sql->bind_param('sss',$this->login,$this->passwordUser,$this->avatar);
