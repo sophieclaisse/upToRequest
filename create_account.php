@@ -20,19 +20,29 @@
     <title>Create account</title>
 </head>
 <body>
+
+<div id="body">
+
 <h1 id="title_createAccount">Create account :</h1>
-<div id="form_account">
+
 <form method="post" action="model/Create_user.php">
+
+    <div>
     <label for="username_sub">Nickname:</label>
-    <input type="text" id="username_sub" name="username_sub"/>
+    <input type="text" class="input" name="username_sub"/>
+    </div>
 
+    <div>
     <label for="password_sub">Password:</label>
-        <input type="password" id="password_sub" name="password_sub"/>
+        <input type="password" class="input" name="password_sub"/>
+    </div>
 
+    <div>
+        <button type="submit" name="btn_CreateAccount" class="button"> Press </button>
+    </div>
 
-        <input type="submit" name="btn_CreateAccount" id="btn_CreateAccount"/>
-</div>
 </form>
+</div>
 
 </body>
 </html>
