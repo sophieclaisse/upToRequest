@@ -14,9 +14,9 @@ class Movement
     public function __construct()
     {
 
-        $this->x = rand(x ,y); //       /!\ X ET Y -> REMPLACER PAR DES VALEURS !!
+        $this->x = rand(0 ,1200);
 
-        $this->y = rand(x,y); //       /!\ X ET Y -> REMPLACER PAR DES VALEURS !!
+        $this->y = rand(0,600);
 
 
     }
@@ -29,20 +29,20 @@ class Movement
 
     public function move_up()
     {
-        $this->x = $this->x + 1 ;
+        $this->y = $this->y + 10 ;
 
     }
     public function move_down()
     {
-        $this->y = $this->x -1 ;
+        $this->y = $this->y -10 ;
     }
     public function move_left()
     {
-        $this->y = $this->y - 1 ;
+        $this->x = $this->x - 10 ;
     }
     public function move_right()
     {
-        $this->y = $this->y + 1 ;
+        $this->x = $this->x + 10 ;
     }
 }
 
