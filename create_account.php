@@ -21,7 +21,7 @@
 
         <h2>Create account : </h2>
 
-            <form method="post" action="model/Create_user.php">
+            <form method="post" action="">
 
                 <div>
                 <label class="label">Nickname : </label>
@@ -60,3 +60,22 @@
 
 </body>
 </html>
+
+<?php
+
+require "controleur/createAccount_controller.php";
+require "model/Create_user.php";
+
+if( isset($_POST['username_sub']) && isset($_POST['password_sub']) && isset($_POST['avatar'])) {
+
+
+    $pseudo = (isset($_REQUEST['username_sub'])? $_REQUEST['username_sub']:null);
+    $password = (isset($_REQUEST['password_sub'])? $_REQUEST['password_sub']:null);
+    $avatar = (isset($_REQUEST['avatar'])? $_REQUEST['avatar']:null);
+
+
+
+    $ctrl = new createAccount_controller();
+
+    $ctrl->create_account($pseudo,$password,$avatar);
+}
