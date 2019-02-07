@@ -9,11 +9,11 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="../style/game.css">
 </head>
 <body>
 <div id="main-box">
@@ -29,6 +29,6 @@
 
 </div>
 </div>
-<script src="game.js"></script>
+<script src="../game.js"></script>
 </body>
 </html>

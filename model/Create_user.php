@@ -17,39 +17,41 @@ class Create_user
 
     public function __construct()
     {
+        /*
         $this->login = $_POST['username_sub'];
         filter_var($this->login, FILTER_SANITIZE_STRING);
         $this->passwordUser = $_POST['password_sub'];
         filter_var($this->passwordUser, FILTER_SANITIZE_STRING);
-        $this->avatar;
-
+        $this->avatar = $_POST['avatar'];
+        filter_var($this->avatar, FILTER_SANITIZE_NUMBER_INT);
+        */
 
         $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 
-        if ($this->db->connect_errno) {
+        if ($this->db->connect_error) {
 
-            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_errno . ")" . $this->db->connect_error;
+            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_error . ")" . $this->db->connect_error;
 
         }
 
     }
 
-    public function create_account()
+    public function account($login,$passwordUser,$avatar)
     {
-        $R_sql = "INSERT INTO `personnnage` (`pseudo`,`password`,`avatar`) 
+        $this->R_sql = "INSERT INTO `personnnage` (`pseudo`,`id_avatar`,`password`) 
                 VALUES (?,?,?)";
 
 
-        $P_sql= $this->db->prepare($R_sql);
+        $this->P_sql= $this->db->prepare($this->R_sql);
 
 
-        $P_sql->bind_param('sss',$this->login,$this->passwordUser,$this->avatar);
+        $this->P_sql->bindParam(1, $login);
+        $this->P_sql->bindParam(2, $avatar);
+        $this->P_sql->bindParam(3, $passwordUser);
 
+        $this->P_sql->execute();
 
-        $P_sql->execute();
-
-
-        $P_sql->close();
+        $this->P_sql->close();
 
 
     }

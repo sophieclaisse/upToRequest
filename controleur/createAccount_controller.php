@@ -12,13 +12,16 @@ class createAccount_controller
 
     public function __construct()
     {
-        $this->model = new createaccount();
+        $this->model = new Create_user();
+
     }
 
-    public function create_account()
+    public function create_account($pseudo,$password,$avatar)
     {
-        $new_account = $this->model->create_account();
-    }
+        include "create_account.php";
 
+        $new_account = $this->model->account($pseudo,$password,$avatar);
+
+    }
 
 }

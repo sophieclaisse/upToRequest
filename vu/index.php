@@ -11,13 +11,13 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../style/style2.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
 
     <div id="body">
-        <form action="check_log.php" methode="post">
+        <form action="../model/check_log.php" method="post">
 
             <div class="label">
             <label for="username"> Pseudo : </label>
@@ -28,11 +28,11 @@
             </div>
 
             <div class="label">
-                <label for=""> Password : </label>
+                <label for="password"> Password : </label>
             </div>
 
             <div class="input">
-                <input type="text" name="password">
+                <input type="text" name="password" id="password">
             </div>
 
 
@@ -41,7 +41,7 @@
             </div>
         </form>
 
-        <a href="create_account.php"> créer un compte </a>
+        <a href="../create_account.php"> créer un compte </a>
     </div>
 
 </body>
