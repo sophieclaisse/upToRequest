@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../style/style2.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
@@ -28,11 +28,11 @@
             </div>
 
             <div class="label">
-                <label for=""> Password : </label>
+                <label for="password"> Password : </label>
             </div>
 
             <div class="input">
-                <input type="text" name="password">
+                <input type="text" name="password" id="password">
             </div>
 
 
