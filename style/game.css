@@ -22,7 +22,8 @@
     display: inline-block;
     border: goldenrod outset 5px;
     background-color: #00796B;
-
+    color: ghostwhite;
+    font-size: 20px;
 }
 #main-box{
     display: flex;
@@ -30,12 +31,25 @@
 
 #level{
     text-align: center;
-    color: ghostwhite;
-    font-size: 20px;
+
 
 }
 
 #vie{
-    width: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#vies{
+    width: 30px;
+    height: 30px;
+}
+#exp{
     height: 20px;
+    border: black solid;
+}
+#exp-win{
+
+    height: 20px;
+    background-color: gold;
 }

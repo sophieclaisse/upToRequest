@@ -23,8 +23,11 @@
 </div>
 <div id="info">
     <div id="level"></div>
-    <div id="exp"></div>
-    <div id="vie"></div>
+    <div id="exp">
+        <div id="exp-win"></div>
+    </div>
+    <div id="vie">vies:
+    <div id="flex-vie"></div></div>
     <div id="mort"></div>
 
 </div>
