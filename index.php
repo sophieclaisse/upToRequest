@@ -17,7 +17,7 @@
 <body>
 
     <div id="body">
-        <form action="model/check_log.php" method="post">
+        <form action="" method="post">
 
             <div class="label">
             <label for="username"> Pseudo : </label>
@@ -49,3 +49,23 @@
 
 
 <?php
+
+require "controleur/check_log_controleur.php";
+require "model/check_log.php";
+
+
+
+if( isset($_POST['username']) && isset($_POST['password'])) {
+
+
+
+    $pseudo = (isset($_REQUEST['username'])? $_REQUEST['username']:null);
+    $password = (isset($_REQUEST['password'])? $_REQUEST['password']:null);
+
+
+
+    $ctrl = new createAccount_controller();
+
+    $ctrl->check_log($pseudo,$password);
+    header("Location:vu/game.php");
+}
