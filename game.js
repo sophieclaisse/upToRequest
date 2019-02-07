@@ -5,7 +5,7 @@ var index = obtenirParametre("index");
 var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
 var char = document.createElement('img');
-         char.src= "img/"+avatars[index];
+         char.src= "../img/"+avatars[index];
          char.id = "char";
          document.getElementById('map').appendChild(char);
 

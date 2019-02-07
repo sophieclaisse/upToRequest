@@ -17,7 +17,7 @@
 <body>
 
     <div id="body">
-        <form action="check_log.php" methode="post">
+        <form action="check_log.php" method="post">
 
             <div class="label">
             <label for="username"> Pseudo : </label>
