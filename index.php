@@ -61,11 +61,11 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
 
     $pseudo = (isset($_REQUEST['username'])? $_REQUEST['username']:null);
     $password = (isset($_REQUEST['password'])? $_REQUEST['password']:null);
+    $password = sha1($password);
 
 
 
-    $ctrl = new createAccount_controller();
+    $ctrl = new check_log_controleur();
 
-    $ctrl->check_log($pseudo,$password);
-    header("Location:vu/game.php");
+    $ctrl->log($pseudo,$password);
 }
