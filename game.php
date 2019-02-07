@@ -16,8 +16,18 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
+<div id="main-box">
 <div id="map">
 
+
+</div>
+<div id="info">
+    <div id="level"></div>
+    <div id="exp"></div>
+    <div id="vie"></div>
+    <div id="mort"></div>
+
+</div>
 </div>
 <script src="game.js"></script>
 </body>

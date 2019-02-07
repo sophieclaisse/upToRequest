@@ -1,6 +1,9 @@
 var x=0;
 var y=0;
 var index = obtenirParametre("index");
+var level = 1;
+var potion = 5;
+var vie = 100;
 
 var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
@@ -13,7 +16,45 @@ function obtenirParametre (sVar) {
     return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 }
 
+function affichestat() {
 
+    document.getElementById('level').innerHTML= "level : "+ level;
+
+    for (var i =5;i>5;i--){
+
+        if(vie === 100){
+
+            potion= 5;
+
+        }
+        if (vie === 80) {
+
+            potion = 4;
+        }
+        if (vie === 60) {
+            potion = 3;
+        }
+        if (vie === 40) {
+            potion = 2
+        }
+        if (vie === 20) {
+
+            potion=1;
+        }
+
+
+         var vies = document.createElement('img');
+        vies.id= vie;
+        vie.src  = "img\\potion_red_notap.png";
+        document.getElementById('vie').appendChild('vies');
+
+
+
+    }
+
+}
+
+affichestat();
 
 
 function deplacement(e) {

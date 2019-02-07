@@ -4,6 +4,7 @@
     width: 1200px;
     height: 600px;
     border: black solid;
+    display: block;
 }
 
 #char{
@@ -12,4 +13,29 @@
 
     display: inline-block;
     position: relative;
+}
+
+#info {
+
+    width: 300px;
+    height: 595px;
+    display: inline-block;
+    border: goldenrod outset 5px;
+    background-color: #00796B;
+
+}
+#main-box{
+    display: flex;
+}
+
+#level{
+    text-align: center;
+    color: ghostwhite;
+    font-size: 20px;
+
+}
+
+#vie{
+    width: 20px;
+    height: 20px;
 }
