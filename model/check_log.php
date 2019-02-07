@@ -11,7 +11,6 @@ class check_log
 
     private $password;
     private $username;
-    private $skin;
 
     public function __construct()
     {
@@ -33,7 +32,8 @@ class check_log
     {
         GLOBAL $conn;
 
-        $sql = "SELECT `pseudo`,`password`,`skin` from `personnage`LEFT JOIN `personnage_jeu` ON personnage.id_personnage = personnage_jeu.id_personnage WHERE '$this->username' = personnage.pseudo AND '$this->password' = personnage.password";
+        $sql = "SELECT `pseudo`,`password`,`skin`,personnage_jeu.id_personnage from `personnage`LEFT JOIN `personnage_jeu` 
+        ON personnage.id_personnage = personnage_jeu.id_personnage WHERE '$this->username' = personnage.pseudo AND '$this->password' = personnage.password ";
 
         $dub = $conn->query($sql);
 
@@ -42,6 +42,7 @@ class check_log
         $username = $row['pseudo'];
         $password = $row['password'];
         $skin = $row['skin'];
+        $id = $row['id_personnage'];
 
 
         if ($username == $_POST['username'] && $password == sha1($_POST['password'])) {
@@ -51,6 +52,7 @@ class check_log
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['password'] = $_POST['password'];
             $_SESSION['skin'] = $skin;
+            $_SESSION['id'] = $id;
 
             header('Location:game.php');
 

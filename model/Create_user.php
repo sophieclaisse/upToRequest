@@ -15,10 +15,8 @@ class Create_user
     public $avatar;
 
 
-
     public function __construct()
     {
-
         $this->login = $_POST['username_sub'];
         filter_var($this->login, FILTER_SANITIZE_STRING);
         $this->passwordUser = $_POST['password_sub'];
@@ -28,9 +26,9 @@ class Create_user
 
         $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 
-        if ($this->db->connect_error) {
+        if ($this->db->connect_errno) {
 
-            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_error . ")" . $this->db->connect_error;
+            echo "Echec lors de la connexion à MySQL : (" . $this->db->connect_errno . ")" . $this->db->connect_error;
 
         }
 
