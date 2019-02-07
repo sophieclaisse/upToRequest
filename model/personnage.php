@@ -32,28 +32,37 @@ class personnage
 
         }
 
-        $this->name = $_SESSION['username'];
-        filter_var($this->name, FILTER_SANITIZE_STRING);
         $this->life = 100;
         $this->defense = 10;
-        $this->skin = $_SESSION['skin'];
-        filter_var($this->skin, FILTER_SANITIZE_STRING);
         $this->experience = 0;
+        $this->attack = 25;
+        $this->defense = 10;
         $this->position_X = rand(0,1200);
         $this->position_Y = rand(0,600);
-        $this->id = $_SESSION['id'];
     }
 
     public function create ()
     {
+        session_start();
 
-        $stmt = $this->db-> prepare("INSERT INTO `personnage-jeu`(`nom`,`vie`,`attaque`,`defense`,`skin`,`experience`,`position_x`,`position_y`) VALUE (?,?,?,?,?,?,?,?)");
+        $this->name = $_SESSION['username'];
+        filter_var($this->name, FILTER_SANITIZE_STRING);
 
-        $stmt-> bind_param("siiisiii",$this->name,$this->life,$this->attack,$this->defense,$this->skin,$this->experience,$this->position_X,$this->position_Y);
+        $this->skin = $_SESSION['skin'];
+        filter_var($this->skin, FILTER_SANITIZE_NUMBER_INT);
+
+        $this->id = $_SESSION['id'];
+
+
+        $stmt = $this->db-> prepare("INSERT INTO `personnage-jeu`(`id_personnage`,`nom`,`vie`,`attaque`,`defense`,`skin`,`experience`,`position_x`,`position_y`) VALUE (?,?,?,?,?,?,?,?)");
+
+        $stmt-> bind_param("siiisiii",$this->id,$this->name,$this->life,$this->attack,$this->defense,$this->skin,$this->experience,$this->position_X,$this->position_Y);
 
         $stmt-> execute();
 
         $stmt -> close();
+
+        header('Location:../vu/game.php');
     }
 
 

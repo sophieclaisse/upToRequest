@@ -6,6 +6,7 @@
  * Time: 09:45
  */
 
+
 class personnage_controleur
 {
     private $model;
@@ -14,6 +15,8 @@ class personnage_controleur
     {
 
         $this->model = new personnage();
+        session_start();
+
 
     }
 
