@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
     <title>Create account</title>
 </head>
@@ -21,7 +21,7 @@
 
         <h2>Create account : </h2>
 
-            <form method="post" action="../model/Create_user.php">
+            <form method="post" action="model/Create_user.php">
 
                 <div>
                 <label class="label">Nickname : </label>
@@ -39,7 +39,19 @@
                     <input type="password" name="password_sub"/>
                 </div>
 
+
+                        <div class="avatar">
+
+                        <input type="radio" id="value1" name="avatar" value="1"> <img src="img/chevalier.png" height="50px">
+                        <input type="radio" id="value2" name="avatar" value="2"> <img src="img/hollow.png" height="50px">
+                        <input type="radio" id="value3" name="avatar" value="3"> <img src="img/vampire.png" height="50px">
+                        <input type="radio" id="value4" name="avatar" value="4"> <img src="img/cyriak.png" height="50px">
+
+                        </div>
+
+
                 <div>
+
                     <button type="submit" name="btn_CreateAccount" class="button"> Press </button>
                 </div>
 

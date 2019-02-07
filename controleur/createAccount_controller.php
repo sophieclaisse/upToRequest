@@ -13,12 +13,14 @@ class createAccount_controller
     public function __construct()
     {
         $this->model = new createaccount();
+
     }
 
     public function create_account()
     {
         $new_account = $this->model->create_account();
-    }
+        header("Location:../vu/index.php");
 
+    }
 
 }

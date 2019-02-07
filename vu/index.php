@@ -17,7 +17,7 @@
 <body>
 
     <div id="body">
-        <form action="check_log.php" methode="post">
+        <form action="../model/check_log.php" methode="post">
 
             <div class="label">
             <label for="username"> Pseudo : </label>
@@ -41,7 +41,7 @@
             </div>
         </form>
 
-        <a href="create_account.php"> créer un compte </a>
+        <a href="../create_account.php"> créer un compte </a>
     </div>
 
 </body>
