@@ -1,16 +1,17 @@
 var x=0;
 var y=0;
+var index = obtenirParametre("index");
 
-var avatar = ['chevalier.png','hollow.png','vampire.png','cyriak.png'];
+var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
-
-
-         var char = document.createElement('img');
-         char.src= "img/"+avatar[3];
+var char = document.createElement('img');
+         char.src= "img/"+avatars[index];
          char.id = "char";
          document.getElementById('map').appendChild(char);
 
-
+function obtenirParametre (sVar) {
+    return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+}
 
 
 
