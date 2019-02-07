@@ -38,20 +38,26 @@ class Create_user
 
     public function account($login,$passwordUser,$avatar)
     {
-        $this->R_sql = "INSERT INTO `personnnage` (`pseudo`,`id_avatar`,`password`) 
+
+        echo"test";
+        $R_sql = "INSERT INTO `personnage` (`pseudo`,`id_avatar`,`password`) 
                 VALUES (?,?,?)";
 
 
-        $this->P_sql= $this->db->prepare($this->R_sql);
+
+        $P_sql= $this->db->prepare($R_sql);
 
 
-        $this->P_sql->bindParam(1, $login);
-        $this->P_sql->bindParam(2, $avatar);
-        $this->P_sql->bindParam(3, $passwordUser);
+        // bug ici
+        $P_sql->bind_param('sis', $login ,$avatar ,$passwordUser);
 
-        $this->P_sql->execute();
 
-        $this->P_sql->close();
+
+
+        $P_sql->execute();
+        var_dump($P_sql);
+
+        $P_sql->close();
 
 
     }

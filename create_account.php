@@ -63,10 +63,15 @@
 
 <?php
 
+
+
 require "controleur/createAccount_controller.php";
 require "model/Create_user.php";
 
+
+
 if( isset($_POST['username_sub']) && isset($_POST['password_sub']) && isset($_POST['avatar'])) {
+
 
 
     $pseudo = (isset($_REQUEST['username_sub'])? $_REQUEST['username_sub']:null);

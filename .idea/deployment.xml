@@ -2,21 +2,14 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="KENNY JS">
+      <paths name="C2sophie">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/web/UpToRequest" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="ftp_000webhost">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="nomaupif">
+      <paths name="Ftp_000WebHost">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

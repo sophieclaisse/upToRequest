@@ -11,13 +11,13 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../style/style2.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style/style2.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
 
     <div id="body">
-        <form action="../model/check_log.php" method="post">
+        <form action="model/check_log.php" method="post">
 
             <div class="label">
             <label for="username"> Pseudo : </label>
@@ -41,7 +41,7 @@
             </div>
         </form>
 
-        <a href="../create_account.php"> créer un compte </a>
+        <a href="create_account.php"> créer un compte </a>
     </div>
 
 </body>
