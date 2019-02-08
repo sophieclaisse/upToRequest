@@ -70,3 +70,8 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
     $ctrl->log($pseudo,$password);
 
 }
+
+if ($_SESSION['username'] != "")
+{
+    header('Location:start.php');
+}
