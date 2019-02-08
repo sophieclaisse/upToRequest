@@ -17,14 +17,7 @@ class Create_user
 
     public function __construct()
     {
-        /*
-        $this->login = $_POST['username_sub'];
-        filter_var($this->login, FILTER_SANITIZE_STRING);
-        $this->passwordUser = $_POST['password_sub'];
-        filter_var($this->passwordUser, FILTER_SANITIZE_STRING);
-        $this->avatar = $_POST['avatar'];
-        filter_var($this->avatar, FILTER_SANITIZE_NUMBER_INT);
-        */
+
 
         $this->db = new mysqli("localhost","c2sophie","umecjkJ_GMVZ9","c2sophie");
 

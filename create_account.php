@@ -83,4 +83,5 @@ if( isset($_POST['username_sub']) && isset($_POST['password_sub']) && isset($_PO
     $ctrl = new createAccount_controller();
 
     $ctrl->create_account($pseudo,$password,$avatar);
+    header("Location:index.php");
 }

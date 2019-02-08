@@ -1,14 +1,18 @@
 var x=0;
 var y=0;
-var index = obtenirParametre("index");
+var avatar = obtenirParametre("avatar");
 var level = 1;
-var potion = 5;
-var vie = 100;
+var vie = 80;
+var potion= vie /20;
+var expMax =1000;
+var exp = 100;
+var conversionexp = exp*100/expMax;
+
 
 var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
 var char = document.createElement('img');
-         char.src= "../img/"+avatars[index];
+         char.src= "../img/"+avatars[avatar];
          char.id = "char";
          document.getElementById('map').appendChild(char);
 
@@ -20,39 +24,28 @@ function affichestat() {
 
     document.getElementById('level').innerHTML= "level : "+ level;
 
-    for (var i =5;i>5;i--){
 
-        if(vie === 100){
-
-            potion= 5;
-
-        }
-        if (vie === 80) {
-
-            potion = 4;
-        }
-        if (vie === 60) {
-            potion = 3;
-        }
-        if (vie === 40) {
-            potion = 2
-        }
-        if (vie === 20) {
-
-            potion=1;
-        }
+    for( let i =potion; i>0; i-- ){
 
 
          var vies = document.createElement('img');
-        vies.id= vie;
-        vie.src  = "img/potion_red_notap.png";
-        document.getElementById('vie').appendChild(vies);
+        vies.id= "vies";
 
+        document.getElementById('flex-vie').appendChild(vies);
+        vies.src ="../img/potion_red_notap.png";
+
+}
+
+    for (let i =0; i<expMax; i++){
+
+        document.getElementById('exp-win').style.width = conversionexp +'px';
 
 
     }
 
-}
+
+
+        }
 
 affichestat();
 

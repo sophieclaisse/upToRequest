@@ -23,19 +23,15 @@ class check_log
 
         }
 
-
-        $this->password = sha1($_POST['password']);
-        $this->username = $_POST['username'];
     }
 
-    public function check()
+    public function check($pseudo,$password)
     {
-        GLOBAL $conn;
 
         $sql = "SELECT `pseudo`,`password`,`skin`,personnage_jeu.id_personnage from `personnage`LEFT JOIN `personnage_jeu` 
-        ON personnage.id_personnage = personnage_jeu.id_personnage WHERE '$this->username' = personnage.pseudo AND '$this->password' = personnage.password ";
+        ON personnage.id_personnage = personnage_jeu.id_personnage WHERE '$pseudo' = personnage.pseudo AND '$password' = personnage.password ";
 
-        $dub = $conn->query($sql);
+        $dub = $this->db->query($sql);
 
         $row = $dub->fetch_assoc();
 
@@ -45,16 +41,16 @@ class check_log
         $id = $row['id_personnage'];
 
 
-        if ($username == $_POST['username'] && $password == sha1($_POST['password'])) {
+        if ($username == $pseudo && $password == $password) {
 
             session_start();
 
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['password'] = $_POST['password'];
+            $_SESSION['username'] = $pseudo;
+            $_SESSION['password'] = $password;
             $_SESSION['skin'] = $skin;
             $_SESSION['id'] = $id;
 
-            header('Location:game.php');
+            header('../Location:vu/perso.php');
 
         }
 

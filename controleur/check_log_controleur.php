@@ -18,10 +18,10 @@ class check_log_controleur
 
     }
 
-    public function check_log()
+    public function log($pseudo,$password)
     {
 
-        $check_log = $this->model->check();
+        $check_log = $this->model->check($pseudo,$password);
 
     }
 
