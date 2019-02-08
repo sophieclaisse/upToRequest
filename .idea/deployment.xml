@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="C2sophie">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/web/UpToRequest" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="KENNY JS">
         <serverdata>
           <mappings>
@@ -20,13 +27,6 @@
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="sophie">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/web/UpToRequest" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

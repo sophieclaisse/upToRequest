@@ -32,7 +32,7 @@
             </div>
 
             <div class="input">
-                <input type="text" name="password" id="password">
+                <input type="password" name="password" id="password">
             </div>
 
 
@@ -68,10 +68,5 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
     $ctrl = new check_log_controleur();
 
     $ctrl->log($pseudo,$password);
-
-    if(session_start()) {
-
-        header('../Location:start.php');
-    }
 
 }
