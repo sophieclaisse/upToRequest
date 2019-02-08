@@ -50,7 +50,7 @@ class check_log
             $_SESSION['skin'] = $skin;
             $_SESSION['id'] = $id;
 
-            header('../Location:vu/perso.php');
+            header('../Location:start.php');
 
         }
 
