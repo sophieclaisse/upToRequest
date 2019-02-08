@@ -45,8 +45,8 @@ function affichestat() {
 
          var vies = document.createElement('img');
         vies.id= vie;
-        vie.src  = "img\\potion_red_notap.png";
-        document.getElementById('vie').appendChild('vies');
+        vie.src  = "img/potion_red_notap.png";
+        document.getElementById('vie').appendChild(vies);
 
 
 
