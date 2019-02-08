@@ -68,4 +68,10 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
     $ctrl = new check_log_controleur();
 
     $ctrl->log($pseudo,$password);
+
+    if(session_start()) {
+
+        header('../Location:start.php');
+    }
+
 }
