@@ -5,32 +5,11 @@
       <paths name="C2sophie">
         <serverdata>
           <mappings>
-            <mapping deploy="/web/UpToRequest" local="$PROJECT_DIR$" web="/" />
-
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="Ftp_000WebHost">
-
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="KENNY JS">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="ftp_000webhost">
-
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="nomaupif">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
