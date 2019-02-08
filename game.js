@@ -2,11 +2,12 @@ var x=0;
 var y=0;
 var avatar = obtenirParametre("avatar");
 var level = 1;
-var vie = 80;
+var vie = 100;
 var potion= vie /20;
 var expMax =1000;
 var exp = 100;
 var conversionexp = exp*100/expMax;
+
 
 
 var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
@@ -90,6 +91,12 @@ function deplacement(e) {
     }
 }
 
-document.body.addEventListener("keydown", deplacement);
+function attaque(){
 
+    vie -= 20;
+
+};
+
+document.body.addEventListener("keydown", deplacement);
+document.getElementById('map').addEventListener("click", attaque);
 
