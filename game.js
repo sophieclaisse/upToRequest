@@ -60,7 +60,7 @@ function deplacement(e) {
         case 38: //haut
 
             document.getElementById('char').style.top = (y--*10) +"px" ;
-            if(y <1){
+            if(y <1) {
                 y=0;
             }
             break;
