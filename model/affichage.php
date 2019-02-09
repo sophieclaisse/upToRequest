@@ -30,19 +30,14 @@ class affichage
 
         $result = $this->db->query($sql);
 
-
+        $data =[];
         while ($row = $result->fetch_assoc()) {
-            ?>
 
-            <div class="corps1">
-                <div class="pseudo"> <?= $row['username'] ?> </div>
 
-                <div class="commentaire"> <?= nl2br($row['commentary']) ?> </div>
+            $data[]=$row;
 
-                <div class="date"> <?= $row['date'] ?> </div>
 
-            </div>
-            <?php
         }
+        json_encode($data);
     }
 }

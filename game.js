@@ -9,6 +9,7 @@ var exp = 100;
 var conversionexp = exp*100/expMax;
 
 
+
 var avatars = ['','chevalier.png','hollow.png','vampire.png','cyriak.png'];
 
 var char = document.createElement('img');
@@ -39,6 +40,7 @@ function affichestat() {
     for (let i =0; i<expMax; i++){
 
         document.getElementById('exp-win').style.width = conversionexp +'px';
+
 
     }
 
@@ -89,6 +91,12 @@ function deplacement(e) {
     }
 }
 
-document.body.addEventListener("keydown", deplacement);
+function attaque(){
 
+    vie -= 20;
+
+};
+
+document.body.addEventListener("keydown", deplacement);
+document.getElementById('map').addEventListener("click", attaque);
 
